@@ -72,4 +72,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # gogo-portfolio
 Portfolio website
->>>>>>> 66be438a513dce5dff37ba57dabfb3e335833515
