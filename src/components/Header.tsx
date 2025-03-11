@@ -19,10 +19,10 @@ import { Link } from "react-scroll";
 
 export default function Header() {
   return (
-    <header className="font-[Poppins-Medium] text-xl bg-emerald-900 fixed top-0 w-full shadow-md z-50 px-6 py-2">
+    <header className="font-medium text-xl bg-[var(--primary)] fixed top-0 w-full shadow-xl z-50 px-6 py-2">
       <div className="flex items-center justify-between">
         {/*My name left aligned*/}
-        <div className="text-2xl font-[Poppins-SemiBold] text-gray-100 flex-1 text-left">
+        <div className="text-2xl font-semibold flex-1 text-left">
           <h1>Goran Kirovski</h1>
         </div>
 
@@ -41,7 +41,7 @@ export default function Header() {
             to="about"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-gray-200 hover:text-white"
+            className="cursor-pointer hover:text-white"
           >
             About
           </Link>
@@ -50,7 +50,7 @@ export default function Header() {
             to="projects"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-gray-200 hover:text-white"
+            className="cursor-pointer hover:text-white"
           >
             Projects
           </Link>
@@ -59,17 +59,15 @@ export default function Header() {
             to="contact"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-gray-200 hover:text-white"
+            className="cursor-pointer  hover:text-white"
           >
             Contact
           </Link>
         </nav>
 
-        {/*Dark/Light mode right aligned*/}
+        {/*TODO: Dark/Light mode right aligned, maybe also EN/DK button*/}
         <div className="flex-1 text-right">
-          <h1 className="text-gray-200 hover:text-white transition px-2 py-1">
-            Button
-          </h1>
+          <h1 className=" hover:text-white transition px-2 py-1"> </h1>
         </div>
       </div>
     </header>
