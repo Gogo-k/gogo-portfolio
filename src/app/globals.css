@@ -10,17 +10,20 @@ Colors to use:
   --accent: #1c158a;
 */
 
-:root {
-  --background: #f6f7fa;
-  --text: #858384;
-  --primary: #fefcfe;
-  /* --secondary: #e7e7eb; */
-  --font-sans: var(--font-poppins);
-}
+/* 
+background: 10100e
+text: ffffe5
+secondary:10201d
 
-/* Used for section titles (About, Projects) */
-.section-title {
-  @apply absolute text-[14rem] font-black uppercase -z-10 opacity-20 blur-sm;
+*/
+
+:root {
+  --background: #040604;
+  --text: #e3ecf2;
+  --primary: #041b17;
+  --secondary: #090b09;
+  --tetriary: #ffffe5;
+  --font-sans: var(--font-poppins);
 }
 
 /* @media (prefers-color-scheme: dark) {
