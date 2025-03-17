@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="font-medium text-xl bg-[var(--primary)]/99  mx-auto fixed top-0 w-full shadow-xl z-50 px-6 py-3">
+    <header className="font-medium text-xl bg-[var(--primary)]/99  mx-auto fixed top-0 w-full shadow-lg z-50 px-6 py-3">
       <div className="flex items-center justify-between">
         {/*My name left aligned*/}
         <div className="text-2xl font-semibold flex-1 text-left">
@@ -28,9 +28,18 @@ export default function Header() {
             to="about"
             smooth={true}
             duration={100}
-            className="cursor-pointer hover:text-[var(--text)]"
+            className="cursor-pointer hover:text-[var(--secondary)]"
           >
             About
+          </Link>
+
+          <Link
+            to="skills"
+            smooth={true}
+            duration={100}
+            className="cursor-pointer hover:text-[var(--secondary)]"
+          >
+            Skills
           </Link>
 
           <Link
@@ -73,6 +82,16 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             About
+          </Link>
+
+          <Link
+            to="skills"
+            smooth={true}
+            duration={100}
+            className="cursor-pointer hover:text-[var(--secondary)]"
+            onClick={() => setIsOpen(false)}
+          >
+            Skills
           </Link>
           <Link
             to="projects"

@@ -10,7 +10,7 @@ export default function Footer() {
     <footer id="contact" className="bg-[var(--primary)] py-6 mt-10">
       <div className="container mx-auto items-center text-center px-6">
         {/* Socials container */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-24">
           {/* LinkedIn */}
           <div className="flex flex-col items-center">
             <Link
