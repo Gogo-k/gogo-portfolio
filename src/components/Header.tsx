@@ -78,6 +78,7 @@ export default function Header() {
             to="about"
             smooth={true}
             duration={100}
+            offset={-120}
             className="cursor-pointer hover:text-[var(--secondary)]"
             onClick={() => setIsOpen(false)}
           >
@@ -88,6 +89,7 @@ export default function Header() {
             to="skills"
             smooth={true}
             duration={100}
+            offset={-40}
             className="cursor-pointer hover:text-[var(--secondary)]"
             onClick={() => setIsOpen(false)}
           >
@@ -97,6 +99,7 @@ export default function Header() {
             to="projects"
             smooth={true}
             duration={100}
+            offset={-80}
             className="cursor-pointer hover:text-[var(--secondary)]"
             onClick={() => setIsOpen(false)}
           >

@@ -7,8 +7,11 @@ import { Github, Mail, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-[var(--primary)] py-6 mt-10">
+    <footer id="contact" className="bg-[var(--primary)] py-6 mt-10 h-auto">
       <div className="container mx-auto items-center text-center px-6">
+        {/* <h2 className="text-[var(--text)] text-[4rem] md:text-[6rem] font-black uppercase opacity-100 -z-10">
+          Contact Me
+        </h2> */}
         {/* Socials container */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-24">
           {/* LinkedIn */}

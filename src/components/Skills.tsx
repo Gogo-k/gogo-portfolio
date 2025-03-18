@@ -37,7 +37,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative flex flex-col items-center justify-center min-h-screen text-center mb-96"
+      className="relative flex flex-col items-center justify-center min-h-screen text-center md:mb-96 mb-24"
     >
       {/* Background "skills" text */}
       {/*md:absolute relative text-[var(--primary)] text-[6rem] md:text-[12rem] font-black blur-xs uppercase opacity-100 -z-10 md:-top-[1%]  */}

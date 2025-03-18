@@ -1,11 +1,13 @@
+"use client";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 export default function About() {
   return (
     /*Hero Section (about me)*/
     <section
       id="about"
-      className="relative flex flex-col items-center justify-center min-h-screen px-6 md:px-16"
+      className="relative flex flex-col items-center justify-center min-h-screen px-6 md:px-16 mb-24"
     >
       {/* Background "about" text*/}
       {/* md:absolute relative text-[var(--primary)] text-[6rem] md:text-[12rem] font-black blur-xs uppercase opacity-80 -z-10 md:top-[20%]  */}
@@ -34,13 +36,21 @@ export default function About() {
           <p className="mt-2">
             A recent bachelor graduate in Software Engineering from Aalborg
             University Copenhagen. The uni has had a focus on problem-based
-            learning and developing real-world solutions. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit. Nam dolor diam, commodo et varius
-            in, scelerisque vel nibh. diam, commodo et varius in, scelerisque
-            vel nibh.diam, commodo et varius in, scelerisque vel nibh.diam,
-            commodo et varius in, scelerisque vel nibh.diam, commodo et varius
-            in, scelerisque vel nibh.diam, commodo et varius in, scelerisque vel
-            nibh.diam, commodo et varius in, scelerisque vel nibh.
+            learning and developing real-world solutions. I{"'"}ve gained a lot
+            of practical experience developing software in a group setting based
+            on agile methodologies, which has helped me improve my collaboration
+            and problem-solving skills. I{"'"}m looking for a place where I can
+            continue to learn and put my skills in a professional setting. If
+            you want to know more about me, feel free to{" "}
+            <Link
+              to="contact"
+              smooth={true}
+              duration={100}
+              className="cursor-pointer italic underline"
+            >
+              contact me
+            </Link>
+            .
           </p>
         </div>
       </div>

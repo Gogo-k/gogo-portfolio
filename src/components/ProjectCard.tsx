@@ -60,7 +60,7 @@ export default function ProjectCard({ projects }: ProjectProps) {
 
           {/* Button to Open Modal for More Details */}
           <button
-            className="mt-auto w-full px-6 py-3 mb-2"
+            className="mt-auto w-full px-6 py-3 mb-2 cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
             More Info
