@@ -132,9 +132,9 @@ export const projects: Project[] = [
   },
   {
     id: 9,
-    title: "Portfolio Website",
+    title: "This website",
     summary:
-      "A software prototype streamlines the recruiting process, by parsing applicants and ranking them, based on user-defined parameters.",
+      "A personal portfolio website, built with Next.js, Tailwind CSS, and TypeScript, designed to present my projects and skills.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget magna blandit, aliquet nunc sed, luctus massa. Nullam non sem vel lacus feugiat egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla tempor finibus.",
     images: ["/images/breaking-bad.png"],
