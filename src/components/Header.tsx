@@ -1,56 +1,54 @@
-// import { useState, useEffect } from "react";
-//import Link from "next/link";
-//import { Moon, Sun } from "lucide-react";
-
-// const Navbar = () => {
-//   const [darkMode, setDarkMode] = useState(false);
-
-//   //Theme change
-//   const toggleDarkMode = () => {
-//     const newTheme = !darkMode;
-//     setDarkMode(newTheme);
-//     document.documentElement.classList.toggle("dark", newTheme);
-//     localStorage.setItem("theme", newTheme ? "dark" : "light");
-//   };
-
-// }
 "use client";
+import { useState } from "react";
 import { Link } from "react-scroll";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="font-[Poppins-Medium] text-xl bg-emerald-900 fixed top-0 w-full shadow-md z-50 px-6 py-2">
+    <header className="font-medium text-xl bg-[var(--primary)]/99  mx-auto fixed top-0 w-full shadow-lg z-50 px-6 py-3">
       <div className="flex items-center justify-between">
         {/*My name left aligned*/}
-        <div className="text-2xl font-[Poppins-SemiBold] text-gray-100 flex-1 text-left">
+        <div className="text-2xl font-semibold flex-1 text-left">
           <h1>Goran Kirovski</h1>
         </div>
 
-        {/* Nav Functions - Center Aligned */}
-        <nav className="flex space-x-8 justify-center">
-          {/* <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-200 hover:text-white"
-          >
-            Home
-          </Link> */}
+        {/* Mobile Menu Button */}
+        <button
+          className="sm:hidden focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
 
+        {/* Nav Functions - Right Aligned */}
+        <nav className="hidden space-x-8 justify-center sm:block">
           <Link
             to="about"
             smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-200 hover:text-white"
+            duration={100}
+            className="cursor-pointer hover:text-[var(--secondary)]"
           >
             About
           </Link>
 
           <Link
+            to="skills"
+            smooth={true}
+            offset={-60}
+            duration={100}
+            className="cursor-pointer hover:text-[var(--secondary)]"
+          >
+            Skills
+          </Link>
+
+          <Link
             to="projects"
             smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-200 hover:text-white"
+            offset={-60}
+            duration={100}
+            className="cursor-pointer hover:text-[var(--secondary)]"
           >
             Projects
           </Link>
@@ -58,43 +56,68 @@ export default function Header() {
           <Link
             to="contact"
             smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-200 hover:text-white"
+            duration={100}
+            className="cursor-pointer hover:text-[var(--secondary)]"
           >
             Contact
           </Link>
         </nav>
 
-        {/*Dark/Light mode right aligned*/}
-        <div className="flex-1 text-right">
-          <h1 className="text-gray-200 hover:text-white transition px-2 py-1">
-            Button
-          </h1>
+        {/* Mobile Navigation Panel */}
+        <div
+          className={`fixed inset-0 bg-[var(--primary)] flex flex-col items-center justify-center space-y-8 text-2xl transition-transform duration-300 ${
+            isOpen ? "translate-y-0" : "-translate-y-full"
+          } sm:hidden`}
+        >
+          <button
+            className="absolute top-5 right-5"
+            onClick={() => setIsOpen(false)}
+          >
+            <X size={40} />
+          </button>
+
+          <Link
+            to="about"
+            smooth={true}
+            duration={100}
+            offset={-120}
+            className="cursor-pointer hover:text-[var(--secondary)]"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </Link>
+
+          <Link
+            to="skills"
+            smooth={true}
+            duration={100}
+            offset={-60}
+            className="cursor-pointer hover:text-[var(--secondary)]"
+            onClick={() => setIsOpen(false)}
+          >
+            Skills
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={100}
+            offset={-80}
+            className="cursor-pointer hover:text-[var(--secondary)]"
+            onClick={() => setIsOpen(false)}
+          >
+            Projects
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={100}
+            className="cursor-pointer hover:text-[var(--secondary)]"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </header>
-
-    //Dark/Light mode right aligned
-
-    //create a header component that will be used in all pages
-
-    // <header className="bg-gray-900 shadow p-4">
-    //   <nav className="container mx-auto flex justify-between">
-    //     <Link href="/" className="text-xl font-bold">
-    //       My Portfolio
-    //     </Link>
-    //     <div className="flex space-x-4">
-    //       <Link href="/" className="hover:underline">
-    //         Home
-    //       </Link>
-    //       <Link href="/projects" className="hover:underline">
-    //         Projects
-    //       </Link>
-    //       <Link href="/about" className="hover:underline">
-    //         About
-    //       </Link>
-    //     </div>
-    //   </nav>
-    // </header>
   );
 }
