@@ -81,7 +81,7 @@ export default function Modal({ project, onClose }: ModalProps) {
             </Link>
           )}
           {project.documentation && (
-            <Link
+            <a
               href={project.documentation}
               target="_blank"
               rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export default function Modal({ project, onClose }: ModalProps) {
               <button className="px-4 py-2 bg-[var(--background)]/80 text-[var(--text)] rounded-md">
                 Documentation
               </button>
-            </Link>
+            </a>
           )}
         </div>
 
