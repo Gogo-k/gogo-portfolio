@@ -36,6 +36,7 @@ export default function Header() {
           <Link
             to="skills"
             smooth={true}
+            offset={-60}
             duration={100}
             className="cursor-pointer hover:text-[var(--secondary)]"
           >
@@ -45,6 +46,7 @@ export default function Header() {
           <Link
             to="projects"
             smooth={true}
+            offset={-60}
             duration={100}
             className="cursor-pointer hover:text-[var(--secondary)]"
           >
@@ -89,7 +91,7 @@ export default function Header() {
             to="skills"
             smooth={true}
             duration={100}
-            offset={-40}
+            offset={-60}
             className="cursor-pointer hover:text-[var(--secondary)]"
             onClick={() => setIsOpen(false)}
           >

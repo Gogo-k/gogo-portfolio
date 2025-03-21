@@ -41,9 +41,11 @@ export default function Skills() {
     >
       {/* Background "skills" text */}
       {/*md:absolute relative text-[var(--primary)] text-[6rem] md:text-[12rem] font-black blur-xs uppercase opacity-100 -z-10 md:-top-[1%]  */}
-      <h1 className="relative text-[var(--primary)] text-[6rem] md:text-[12rem] font-black uppercase opacity-100 -z-10">
-        Skills
+      <h1 className="relative  text-[6rem] md:text-[12rem] font-black uppercase">
+        <div className="absolute left-1/2 -translate-x-1/2 right-[50%] top-[10%] h-[6rem] md:h-[12rem] w-sm md:w-3xl bg-[var(--primary)] rounded-tr-full rounded-bl-full"></div>
+        <span className="relative z-10 text-[var(--text)]">Skills</span>
       </h1>
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8 mt-2 px-4 w-full max-w-2xl">
         {/* Programming Languages */}
         <SkillCard Icon={Java} name="Java" />

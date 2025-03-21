@@ -21,11 +21,11 @@ export default function ProjectCard({ projects }: ProjectProps) {
       <div className="bg-[var(--primary)] flex-row shadow-[var(--primary)] rounded-xl overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl w-full max-w-xs">
         <div className="relative">
           {/* Category Label (Fixed inside the card) */}
-          <span className="absolute right-2 top-2 text-[var(--primary)] bg-[var(--tetriary)] text-xs px-3 py-1 rounded-full">
+          <span className="absolute right-2 top-2 text-[var(--primary)] bg-[var(--tetriary)] border-2 text-xs px-3 py-1 rounded-full">
             {projects.date}
           </span>
           {/* Category Label (Fixed inside the card) */}
-          <span className="absolute left-2 top-2 text-[var(--primary)] bg-[var(--tetriary)] text-xs px-3 py-1 rounded-full">
+          <span className="absolute left-2 top-2 text-[var(--primary)] bg-[var(--tetriary)] border-2 text-xs px-3 py-1 rounded-full">
             {projects.category}
           </span>
           {/* Project Images (Only show the first image as preview) */}
@@ -48,7 +48,7 @@ export default function ProjectCard({ projects }: ProjectProps) {
             {projects.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="bg-gray-800 text-white text-xs px-2 py-1 rounded-md"
+                className="bg-[var(--secondary)] text-white text-xs px-2 py-1 rounded-md"
               >
                 {tech}
               </span>

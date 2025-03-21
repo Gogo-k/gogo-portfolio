@@ -69,11 +69,17 @@ export default function Modal({ project, onClose }: ModalProps) {
 
         {/* Links */}
         <div className="mt-6 flex gap-4">
-          <Link href={project.github} target="_blank" rel="noopener noreferrer">
-            <button className="px-4 py-2 bg-[var(--background)]/80 text-[var(--text)] rounded-md">
-              GitHub
-            </button>
-          </Link>
+          {project.github && (
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="px-4 py-2 bg-[var(--background)]/80 text-[var(--text)] rounded-md">
+                GitHub
+              </button>
+            </Link>
+          )}
           {project.documentation && (
             <Link
               href={project.documentation}
