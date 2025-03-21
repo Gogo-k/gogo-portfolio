@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden font-sans">
         <Header />
         <main>{children}</main>
         <Footer />

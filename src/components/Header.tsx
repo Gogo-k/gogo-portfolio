@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { Menu, X } from "lucide-react";
 
 export default function Header() {
@@ -24,16 +24,16 @@ export default function Header() {
 
         {/* Nav Functions - Right Aligned */}
         <nav className="hidden space-x-8 justify-center sm:block">
-          <Link
+          <ScrollLink
             to="about"
             smooth={true}
             duration={100}
             className="cursor-pointer hover:text-[var(--secondary)]"
           >
             About
-          </Link>
+          </ScrollLink>
 
-          <Link
+          <ScrollLink
             to="skills"
             smooth={true}
             offset={-60}
@@ -41,9 +41,9 @@ export default function Header() {
             className="cursor-pointer hover:text-[var(--secondary)]"
           >
             Skills
-          </Link>
+          </ScrollLink>
 
-          <Link
+          <ScrollLink
             to="projects"
             smooth={true}
             offset={-60}
@@ -51,16 +51,16 @@ export default function Header() {
             className="cursor-pointer hover:text-[var(--secondary)]"
           >
             Projects
-          </Link>
+          </ScrollLink>
 
-          <Link
+          <ScrollLink
             to="contact"
             smooth={true}
             duration={100}
             className="cursor-pointer hover:text-[var(--secondary)]"
           >
             Contact
-          </Link>
+          </ScrollLink>
         </nav>
 
         {/* Mobile Navigation Panel */}
@@ -76,7 +76,7 @@ export default function Header() {
             <X size={40} />
           </button>
 
-          <Link
+          <ScrollLink
             to="about"
             smooth={true}
             duration={100}
@@ -85,9 +85,9 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             About
-          </Link>
+          </ScrollLink>
 
-          <Link
+          <ScrollLink
             to="skills"
             smooth={true}
             duration={100}
@@ -96,8 +96,8 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             Skills
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="projects"
             smooth={true}
             duration={100}
@@ -106,8 +106,8 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             Projects
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="contact"
             smooth={true}
             duration={100}
@@ -115,7 +115,7 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             Contact
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </header>
