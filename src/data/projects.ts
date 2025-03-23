@@ -130,6 +130,7 @@ export const projects: Project[] = [
       "/images/p5/P5_ss2.png",
       "/images/p5/P5_ss3.png",
       "/images/p5/P5_ss4.png",
+      "/images/p5/P5_ss5.png",
     ],
     technologies: [
       "React",
