@@ -6,7 +6,9 @@ const sortedProjects = [...projects].sort((a, b) => {
   const getSeason = (date: string) => (date.startsWith("Fall") ? 1 : 0);
 
   return (
-    getYear(b.date) - getYear(a.date) || getSeason(b.date) - getSeason(a.date)
+    getYear(b.date) - getYear(a.date) ||
+    getSeason(b.date) - getSeason(a.date) ||
+    b.id - a.id
   );
 });
 

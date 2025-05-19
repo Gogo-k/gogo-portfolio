@@ -8,7 +8,7 @@ export type Project = {
   github: string;
   documentation: string;
   date: `${"Spring" | "Fall"} ${number}`;
-  category: "University" | "Hobby" | "Gamejam";
+  category: "University" | "Hobby" | "Gamejam" | "Internship";
 };
 
 export const projects: Project[] = [
@@ -213,6 +213,25 @@ export const projects: Project[] = [
     github: "https://github.com/Gogo-k/gogo-portfolio",
     documentation: "",
     category: "Hobby",
+    date: "Spring 2025",
+  },
+  {
+    id: 10,
+    title: "Sommerskov Internship",
+    summary:
+      "A two-part internship, first focused building and deploying part of the current website to another domain, and the second on migrating the webshop from Magento to Shopify. ",
+    description: `During my internship at Sommerskov.dk (Vækst A/S), I was initially tasked with moving and visually overhauling part of the current website (sommerskov.dk) to a new domain (vaekst.dk). 
+    In the second phase, I worked on migrating the webshop from Magento to Shopify by extracting, modifying and preparing customer, order, and product data for import, as well as setting up the new store.
+    However, the second part was halted due to the Shopify solution having a higher cost than the existing setup.`,
+    images: [
+      "/images/in1/in1_ss0.png",
+      "/images/in1/in1_ss2.png",
+      "/images/in1/in1_ss4.png",
+    ],
+    technologies: ["Next.js", "TypeScript", "TailwindCSS"],
+    github: "https://github.com/Gogo-k/praktik-1-foredrag",
+    documentation: "",
+    category: "Internship",
     date: "Spring 2025",
   },
 ];
